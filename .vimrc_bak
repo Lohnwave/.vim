@@ -75,6 +75,7 @@ set rtp+=~/.vim/bundle/nerdtree
 set rtp+=~/.vim/bundle/vim-airline
 set rtp+=~/.vim/bundle/vim-airline-themes
 set rtp+=~/.vim/bundle/leaderf
+set rtp+=~/.vim/bundle/asyncrun.vim
 " NERDTree config
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -111,3 +112,14 @@ noremap <leader>fb :LeaderfBufTagAll<cr>
 noremap <leader>ft :LeaderfBufTag<cr>
 noremap <leader>fl :LeaderfLine<cr>
 noremap <leader>fw :LeaderfWindow<cr>
+" asyncrun 异步执行shell命令
+let g:asyncrun_open = 10
+nnoremap <F10> :call asyncrun#quickfix_toggle(16)<cr>
+let g:asyncrun_rootmarks = ['BLADE_ROOT', '.svn', '.git', '.root']
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+  \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+  \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+" 设置alias
+call SetupCommandAlias("ar","AsyncRun")
