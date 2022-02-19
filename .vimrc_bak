@@ -1,0 +1,71 @@
+set encoding=utf-8
+filetype on
+filetype plugin on
+filetype indent on
+set pyxversion=3
+let g:python3_host_prog = '/usr/bin/python3.9'
+set syntax=on
+syntax enable
+set nu
+set hlsearch
+" 禁止光标闪烁
+set gcr=a:block-blinkon0                                                                                                                                                 
+" 总是显示状态栏
+set laststatus=2
+" file encoding
+set fileencodings=ucs-bom,utf-8-bom,utf-8,cp936,big5,gb18030,ucs
+let g:fencview_autodetect = 1
+   
+let c_gnu=1
+" 显示tab和空格
+set listchars=tab:>-,trail:-
+set list
+   
+" 显示光标当前位置
+set ruler
+" 高亮显示当前行/列
+set cursorline
+set cursorcolumn
+" 实时搜索
+set incsearch
+set ignorecase
+" 不使用兼容模式
+set nocompatible
+" 自动补全
+set wildmenu
+" 禁止折行
+set nowrap
+" 显示命令
+set showcmd
+" 显示匹配的括号
+set showmatch
+" 自动缩进
+set autoindent
+set cinoptions=e2
+" tab
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set smartindent
+  
+set autoread
+set mouse-=a
+   
+" 修改leader键
+let mapleader=','
+let g:mapleader=','
+" 保存后自动生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+   
+" 设置color
+let g:onedark_terminal_italics = 1
+let g:onedark_termcolors = 256
+colorscheme onedark
+set background=light
+"let g:molokai_original = 1
+   
+" 切换前后buffer
+nnoremap [b :bprevious<cr>
+nnoremap ]b :bnext<cr>
+" 设置真彩显示
+set t_Co=256
