@@ -74,6 +74,7 @@ set t_Co=256
 set rtp+=~/.vim/bundle/nerdtree
 set rtp+=~/.vim/bundle/vim-airline
 set rtp+=~/.vim/bundle/vim-airline-themes
+set rtp+=~/.vim/bundle/leaderf
 " NERDTree config
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -92,3 +93,21 @@ let g:airline_powerline_fonts = 0
 " show colors
 set t_Co=256
 let g:airline#extensions#tabline#buffer_nr_show = 1
+"leaderf 文件快速查找，函数列表
+let g:Lf_ShortcutF = '<C-P>'
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_WindowHeight = 0.3
+let g:Lf_TabpagePosition = 2
+let g:Lf_StlColorscheme = 'gruvbox_material'
+let g:Lf_PreviewCode = 1
+let g:Lf_WorkingDirectoryMode = 'AF'
+let g:Lf_RootMarkers = ['BLADE_ROOT', '.root', '.git']
+let g:Lf_ReverseOrder = 1
+let g:Lf_PopupColorscheme = 'gruvbox_material'
+noremap <leader>f :LeaderfSelf<cr>
+noremap <leader>fm :LeaderfMru<cr>
+noremap <leader>ff :LeaderfFunction<cr>
+noremap <leader>fb :LeaderfBufTagAll<cr>
+noremap <leader>ft :LeaderfBufTag<cr>
+noremap <leader>fl :LeaderfLine<cr>
+noremap <leader>fw :LeaderfWindow<cr>
