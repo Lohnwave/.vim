@@ -76,6 +76,7 @@ set rtp+=~/.vim/bundle/vim-airline
 set rtp+=~/.vim/bundle/vim-airline-themes
 set rtp+=~/.vim/bundle/leaderf
 set rtp+=~/.vim/bundle/asyncrun.vim
+set rtp+=~/.vim/bundle/vim-cpp-enhanced-highlight
 " NERDTree config
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -123,3 +124,9 @@ fun! SetupCommandAlias(from, to)
 endfun
 " 设置alias
 call SetupCommandAlias("ar","AsyncRun")
+" vim-cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_template_highlight = 1
