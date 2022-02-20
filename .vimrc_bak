@@ -77,6 +77,7 @@ set rtp+=~/.vim/bundle/vim-airline-themes
 set rtp+=~/.vim/bundle/leaderf
 set rtp+=~/.vim/bundle/asyncrun.vim
 set rtp+=~/.vim/bundle/vim-cpp-enhanced-highlight
+set rtp+=~/.vim/bundle/git-blame.vim
 " NERDTree config
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -130,3 +131,5 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
 let g:cpp_experimental_template_highlight = 1
+" git blame
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR> 
