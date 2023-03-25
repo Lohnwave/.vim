@@ -1,3 +1,6 @@
+augroup filetype
+    autocmd! BufRead,BufNewFile BUILD set filetype=blade
+augroup end
 set encoding=utf-8
 filetype on
 filetype plugin on
@@ -45,7 +48,7 @@ set cinoptions=e2
 " tab
 set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set smartindent
   
 set autoread
@@ -81,8 +84,8 @@ set rtp+=~/.vim/bundle/git-blame.vim
 
 " 2023 0304 LSP
 set rtp+=~/.vim/bundle/deoplete.nvim
-set rtp+=~/.vim/bundle/nvim-yarp 
-set rtp+=~/.vim/bundle/vim-hug-neovim-rpc 
+set rtp+=~/.vim/bundle/nvim-yarp
+set rtp+=~/.vim/bundle/vim-hug-neovim-rpc
 set rtp+=~/.vim/bundle/languageclient-neovim
 
 
